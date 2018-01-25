@@ -1,46 +1,36 @@
---------------------------MAIN---------------------------
+{--------------------------MAIN---------------------------}
 const
-    m = 10;
+    N = 10;
  
 var
-    arr: array[1..m] of integer;
-    i: integer;
-begin
+var
+    A: array[1..N] of integer;
+    i, j, k: integer;
+ 
+BEGIN
     randomize;
  
-    write ('Исходный массив: ');
-    for i := 1 to m do begin
-        arr[i] := random(256);
-        write (arr[i]:4);
+    write ('Bubble Sort: ');
+    for i := 1 to N do 
+    begin
+        A[i] := random(199)-99;
+        write (A[i]:4);
     end;
-end.
 
+{--------------------------SORT-----------------------------}
 
-
----------------------SORT-----------------------------
-
-begin
-for i := 1 to m-1 do
+    for i := 1 to N-1 do
         for j := 1 to m-i do
-            if arr[j] > arr[j+1] then begin
-                k := arr[j];
-                arr[j] := arr[j+1];
-                arr[j+1] := k
+            if ?[j] > ?[j+1] then 
+            begin
+                k := ?[j];
+                ?[j] := ?[j+1];
+                ?[j+1] := k
             end;
-end.
-
-
-
-
-
 
 ------------------------OutSort---------------------------
-const
-  N = 10;
-var
-  A: array[1..N]of integer;
-BEGIN
-  writeln;
-  for i := 1 to N do
-    write(A[i]:4);
+
+    writeln;
+    for i := 1 to N do
+      write(A[i]:4);
 END.
