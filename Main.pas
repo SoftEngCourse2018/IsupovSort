@@ -1,5 +1,5 @@
 const
-    m = 10;
+    m = 100;
  
 var
     arr: array[1..m] of integer;
